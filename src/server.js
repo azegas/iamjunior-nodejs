@@ -4,22 +4,41 @@ const path = require("path");
 
 app.use(express.static(path.join(__dirname, '../public')));
 
+// masyvas su kategorijomis
+const categories = [
+    { id: 1, name: "Electronics" },
+    { id: 2, name: "Fashion" },
+    { id: 3, name: "Home & Garden" },
+    { id: 4, name: "Sports & Outdoors" },
+    { id: 5, name: "Toys & Games" }
+];
+
 // middleware - tarpine funkcija pries apdorojant uzklausas
 app.use((req, res, next) => {
     console.log(req.url);
     next();
 });
 
+// GET uzklausa - gauti visas kategorijas
 app.get("/api/categories", (req, res) => {
-    res.json(
-        [
-        { id: 1, name: "Electronics" },
-        { id: 2, name: "Fashion" },
-        { id: 3, name: "Home & Garden" },
-        { id: 4, name: "Sports & Outdoors" },
-        { id: 5, name: "Toys & Games" }
-        ]
-    )
+    res.json(categories);
+});
+
+// POST uzklausa - sukurti nauja kategorija
+app.post("/api/categories", (req, res) => {
+
+    // logika, pridedam nauja kategorija i masyva
+    categories.push({
+        id: categories.length + 1,
+        name: 'Category ' + (categories.length + 1)
+    });
+    
+    // atsakymas klientui
+    res.json({
+        success: true,
+        message: 'Category created successfully',
+        category: categories[categories.length - 1]
+    });
 });
 
 app.listen(3000, () => {
