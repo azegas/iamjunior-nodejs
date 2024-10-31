@@ -5,8 +5,16 @@ const path = require("path");
 // dalinkis visais failais kurie yra public folderyje
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
+app.get("/api/categories", (req, res) => {
+    res.json(
+        [
+        { id: 1, name: "Electronics" },
+        { id: 2, name: "Fashion" },
+        { id: 3, name: "Home & Garden" },
+        { id: 4, name: "Sports & Outdoors" },
+        { id: 5, name: "Toys & Games" }
+        ]
+    )
 });
 
 app.listen(3000, () => {
