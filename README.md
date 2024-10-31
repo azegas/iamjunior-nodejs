@@ -1,4 +1,5 @@
 - [iamjunior-nodejs](#iamjunior-nodejs)
+- [BONUS tasks](#bonus-tasks)
 - [Uzduotys](#uzduotys)
   - [Node.js ir Express pagrindai](#nodejs-ir-express-pagrindai)
     - [Home service aplikacijos API](#home-service-aplikacijos-api)
@@ -20,6 +21,8 @@ node src/server.js
 npm run server
 ```
 
+# BONUS tasks
+- [ ] Swagger API docs - https://www.youtube.com/watch?v=eiSem0cqaN0&ab_channel=KrisFoster
 
 # Uzduotys
 
