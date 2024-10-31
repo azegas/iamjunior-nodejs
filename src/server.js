@@ -33,6 +33,9 @@ app.get("/api/categories", (req, res) => {
 // POST uzklausa - sukurti nauja kategorija
 app.post("/api/categories", (req, res) => {
 
+    // body, during request is encrypted and compressed, that's why we can not see it
+    console.log(req.body);
+
     // logika, pridedam nauja kategorija i masyva
     categories.push({
         id: categories.length + 1,
