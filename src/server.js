@@ -2,8 +2,13 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-// dalinkis visais failais kurie yra public folderyje
 app.use(express.static(path.join(__dirname, '../public')));
+
+// middleware - tarpine funkcija pries apdorojant uzklausas
+app.use((req, res, next) => {
+    console.log(req.url);
+    next();
+});
 
 app.get("/api/categories", (req, res) => {
     res.json(
