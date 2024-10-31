@@ -33,6 +33,8 @@ app.get("/api/categories", (req, res) => {
 // POST uzklausa - sukurti nauja kategorija
 app.post("/api/categories", (req, res) => {
 
+    console.log(req.body);
+
     // logika, pridedam nauja kategorija i masyva
     categories.push({
         id: categories.length + 1,
