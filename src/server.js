@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const morgan = require("morgan");
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -25,7 +26,11 @@ app.use((req, res, next) => {
     next();
 });
 
+// middleware to parse(decrypt, decompress) JSON bodies
 app.use(express.json());
+
+// middleware to log request details
+app.use(morgan('dev'));
 
 // GET uzklausa - gauti visas kategorijas
 app.get("/api/categories", (req, res) => {
