@@ -15,7 +15,13 @@ const categories = [
 
 // middleware - tarpine funkcija pries apdorojant uzklausas
 app.use((req, res, next) => {
-    console.log(req.url);
+    console.log('hello from middleware 1');
+    next();
+});
+
+app.use((req, res, next) => {
+    // Middleware to log the request method and path
+    console.log('hello from middleware 2');
     next();
 });
 
