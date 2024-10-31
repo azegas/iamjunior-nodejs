@@ -25,6 +25,8 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use(express.json());
+
 // GET uzklausa - gauti visas kategorijas
 app.get("/api/categories", (req, res) => {
     res.json(categories);
