@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const morgan = require("morgan");
+require("dotenv").config();
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -57,6 +58,6 @@ app.post("/api/categories", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+app.listen(process.env.API_PORT, () => {
+  console.log(`Server is running on ${process.env.API_PROTOCOL}://${process.env.API_HOST}:${process.env.API_PORT}`);
 });
