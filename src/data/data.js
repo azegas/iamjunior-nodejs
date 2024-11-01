@@ -1,31 +1,31 @@
 const categories = [
     { 
         id: 1, 
-        name: "Electronics", 
+        name: "electronics", 
         color: "blue", 
         url: "https://example.com/electronics"
     },
     { 
         id: 2, 
-        name: "Fashion", 
+        name: "fashion", 
         color: "pink", 
         url: "https://example.com/fashion"
     },
     { 
         id: 3, 
-        name: "Home & Garden", 
+        name: "home", 
         color: "green", 
         url: "https://example.com/home-garden"
     },
     { 
         id: 4, 
-        name: "Sports & Outdoors", 
+        name: "sports", 
         color: "orange", 
         url: "https://example.com/sports-outdoors"
     },
     { 
         id: 5, 
-        name: "Toys & Games", 
+        name: "toys", 
         color: "yellow", 
         url: "https://example.com/toys-games"
     }
@@ -37,7 +37,7 @@ const businesses = [
             name: "TechCorp", 
             description: "Leading electronics manufacturer", 
             address: "123 Tech St, Silicon Valley", 
-            category: "Electronics", 
+            category: "electronics", 
             contactPerson: "John Doe", 
             email: "john.doe@techcorp.com", 
             images: ["https://example.com/techcorp-logo.png"]
@@ -47,7 +47,7 @@ const businesses = [
             name: "Fashionista", 
             description: "Trendy fashion retailer", 
             address: "456 Fashion Ave, New York", 
-            category: "Fashion", 
+            category: "fashion", 
             contactPerson: "Jane Smith", 
             email: "jane.smith@fashionista.com", 
             images: ["https://example.com/fashionista-logo.png"]
@@ -57,7 +57,7 @@ const businesses = [
             name: "GreenThumb", 
             description: "Home and garden supplies", 
             address: "789 Garden St, Los Angeles", 
-            category: "Home & Garden", 
+            category: "home", 
             contactPerson: "Michael Brown", 
             email: "michael.brown@greenthumb.com", 
             images: ["https://example.com/greenthumb-logo.png"]
@@ -67,7 +67,7 @@ const businesses = [
             name: "OutdoorAdventures", 
             description: "Sports and outdoor gear", 
             address: "1010 Outdoor Dr, Denver", 
-            category: "Sports & Outdoors", 
+            category: "sports", 
             contactPerson: "Emily Johnson", 
             email: "emily.johnson@outdooradventures.com", 
             images: ["https://example.com/outdooradventures-logo.png"]
@@ -77,11 +77,21 @@ const businesses = [
             name: "Toyland", 
             description: "Toys and games for all ages", 
             address: "1212 Toy St, Chicago", 
-            category: "Toys & Games", 
+            category: "toys", 
             contactPerson: "Sarah Lee", 
             email: "sarah.lee@toyland.com", 
-            images: ["https://example.com/toyland-logo.png"]
-    }
+        images: ["https://example.com/toyland-logo.png"]
+        },
+        { 
+            id: 6, 
+            name: "Fashionista", 
+            description: "Trendy fashion retailer", 
+            address: "456 Fashion Ave, New York", 
+            category: "fashion", 
+            contactPerson: "Jane Smith", 
+            email: "jane.smith@fashionista.com", 
+            images: ["https://example.com/fashionista-logo.png"]
+        },
 ];
 
 const orders = [
