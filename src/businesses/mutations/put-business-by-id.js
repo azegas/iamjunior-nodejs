@@ -1,5 +1,19 @@
 const { businesses } = require('../../data/data');
 
+/*
+http://localhost:3000/api/businesses/1
+
+{
+    "name": "New Name",
+    "description": "New Description",
+    "address": "New Address",
+    "category": "New Category",
+    "contactPerson": "New Contact Person",
+    "email": "new.email@business.com",
+    "images": ["new-image1.jpg", "new-image2.jpg"]
+}
+*/
+
 function putBusiness(req, res) {
     const businessId = req.params.id;
     const business = businesses.find(business => business.id === parseInt(businessId));
@@ -9,6 +23,11 @@ function putBusiness(req, res) {
     }
 
     const { name, description, address, category, contactPerson, email, images } = req.body;
+
+    // Check if any of the fields are provided
+    if (!name && !description && !address && !category && !contactPerson && !email && !images) {
+        return res.status(400).json({ message: 'Please provide at least one of the fields to update' });
+    }
 
     // Updates the business name if a new name is provided, otherwise keeps the existing name
     business.name = name || business.name;

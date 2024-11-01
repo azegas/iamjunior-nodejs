@@ -94,7 +94,7 @@ const businesses = [
         },
 ];
 
-const orders = [
+const bookings = [
     {
         id: 1,
         businessId: 1,
@@ -106,18 +106,54 @@ const orders = [
     },
     {
         id: 2,
-        businessId: 2,
+        businessId: 1,
         date: "2023-10-02",
         time: "15:00",
         userEmail: "user2@example.com",
         userName: "User Two",
         status: "Completed"
     },
+    {
+        id: 3,
+        businessId: 3,
+        date: "2023-10-03",
+        time: "16:00",
+        userEmail: "user3@example.com",
+        userName: "User Three",
+        status: "Pending"
+    },
+    {
+        id: 4,
+        businessId: 4,
+        date: "2023-10-04",
+        time: "17:00",
+        userEmail: "user4@example.com",
+        userName: "User Four",
+        status: "Completed"
+    },
+    {
+        id: 5,
+        businessId: 5,
+        date: "2023-10-05",
+        time: "18:00",
+        userEmail: "user5@example.com",
+        userName: "User Five",
+        status: "Pending"
+    },
+    {
+        id: 6,
+        businessId: 6,
+        date: "2023-10-06",
+        time: "19:00",
+        userEmail: "user6@example.com",
+        userName: "User Six",
+        status: "Completed"
+    }
 ];
 
 
 module.exports = {
     categories,
     businesses,
-    orders
+    bookings
 }
