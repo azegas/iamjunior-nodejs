@@ -1,4 +1,4 @@
-const { categories } = require('../mock-categories');
+const { categories } = require('../../data/data');
 
 function getCategories(req, res) {
   res.json(categories);
