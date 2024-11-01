@@ -54,7 +54,7 @@ Sukurti RESTful API naudojant Express.js, skirtą valdyti kategorijas, įmones i
 
 #### 3. Užsakymai
 - [x] GET /bookings/user/:email: Gauna visus užsakymus, susijusius su konkretaus vartotojo el. pašto adresu.
-- [ ] POST /bookings: Sukuria naują užsakymą. Užtikrinti, kad būtų pateikti visi laukai.
+- [x] POST /bookings: Sukuria naują užsakymą. Užtikrinti, kad būtų pateikti visi laukai.
 - [ ] DELETE /bookings/:id: Ištrina konkretų užsakymą.
 
 #### Papildomos funkcijos, kurias reikia įgyvendinti:
