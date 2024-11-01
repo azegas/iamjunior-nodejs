@@ -58,5 +58,5 @@ Sukurti RESTful API naudojant Express.js, skirtą valdyti kategorijas, įmones i
 - [x] DELETE /bookings/:id: Ištrina konkretų užsakymą.
 
 #### Papildomos funkcijos, kurias reikia įgyvendinti:
-- [ ] Error handling: Įgyvendinti išsamią klaidų tvarkymo sistemą, kad būtų aiškiai pateikiami pranešimai apie trūkstamus duomenis, netinkamas operacijas ir nesėkmingus veiksmus.
-- [ ] Data check: Užtikrinti, kad visi įvesties duomenys atitiktų tikėtinus formatus ir apribojimus prieš juos apdorojant.
+- [x] Error handling: Įgyvendinti išsamią klaidų tvarkymo sistemą, kad būtų aiškiai pateikiami pranešimai apie trūkstamus duomenis, netinkamas operacijas ir nesėkmingus veiksmus.
+- [x] Data check: Užtikrinti, kad visi įvesties duomenys atitiktų tikėtinus formatus ir apribojimus prieš juos apdorojant.

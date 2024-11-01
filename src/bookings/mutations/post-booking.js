@@ -21,7 +21,15 @@ function postBooking(req, res) {
     if (!businessId || !date || !time || !userEmail || !userName || !status) {
         return res.status(400).json({
             success: false,
-            message: 'All fields are required: businessId, date, time, userEmail, userName, and status.'
+            message: 'Required fields: businessId, date, time, userEmail, userName, and status.'
+        });
+    }
+
+    // Check if fields are of the correct type
+    if (typeof businessId !== 'string' || typeof date !== 'string' || typeof time !== 'string' || typeof userEmail !== 'string' || typeof userName !== 'string' || typeof status !== 'string' || !userEmail.includes('@')) {
+        return res.status(400).json({
+            success: false,
+            message: 'businessId, date, time, userEmail, userName, and status should be strings, and userEmail should contain @.'
         });
     }
 

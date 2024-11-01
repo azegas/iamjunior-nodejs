@@ -1,4 +1,5 @@
 const { businesses } = require('../../data/data');
+const { categories } = require('../../data/data');
 
 /*
 http://localhost:3000/api/businesses
@@ -22,6 +23,21 @@ function postBusiness(req, res) {
         return res.status(400).json({
             success: false,
             message: 'Required fields: name, description, address, category, contactPerson, email, and images.'
+        });
+    }
+
+    if (typeof name !== 'string' || typeof description !== 'string' || typeof address !== 'string' || typeof contactPerson !== 'string' || typeof email !== 'string' || !email.includes('@') || !Array.isArray(images)) {
+        return res.status(400).json({
+            success: false,
+            message: 'Name, description, address, contactPerson, and email should be strings, images should be an array, and email should contain @.'
+        });
+    }
+
+    const categoryExists = categories.some(cat => cat.name === category);
+    if (!categoryExists) {
+        return res.status(400).json({
+            success: false,
+            message: `Category '${category}' does not exist. Available categories are: ${categories.map(cat => cat.name).join(', ')}.`
         });
     }
 

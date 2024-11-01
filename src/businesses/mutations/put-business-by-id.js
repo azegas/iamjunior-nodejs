@@ -40,9 +40,24 @@ function putBusiness(req, res) {
         return res.status(400).json({ message: 'Please provide at least one valid field to update' });
     }
 
-    // Update business fields only if they are provided
+    // Update business fields only if they are provided and of the correct type
     allowedFields.forEach(field => {
         if (req.body[field] !== undefined) {
+            if (field === 'images') {
+                if (!Array.isArray(req.body[field])) {
+                    return res.status(400).json({ message: 'Images should be an array' });
+                }
+                if (!req.body[field].every(image => typeof image === 'string')) {
+                    return res.status(400).json({ message: 'All images should be strings' });
+                }
+            } else {
+                if (field === 'email' && !req.body[field].includes('@')) {
+                    return res.status(400).json({ message: 'Email should contain @' });
+                }
+                if (typeof req.body[field] !== 'string') {
+                    return res.status(400).json({ message: `${field} should be a string` });
+                }
+            }
             business[field] = req.body[field];
         }
     });
