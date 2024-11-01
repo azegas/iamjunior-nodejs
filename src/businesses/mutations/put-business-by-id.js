@@ -17,31 +17,40 @@ http://localhost:3000/api/businesses/1
 
 function putBusiness(req, res) {
     const businessId = req.params.id;
+    
     const business = businesses.find(business => business.id === parseInt(businessId));
-
     if (!business) {
         return res.status(404).json({ message: 'Business with such id does not exist' });
     }
 
-    const { name, description, address, category, contactPerson, email, images } = req.body;
+    const allowedFields = ['name', 'description', 'address', 'category', 'contactPerson', 'email', 'images'];
 
-    // Check if any of the fields are provided
-    if (!name && !description && !address && !category && !contactPerson && !email && !images) {
-        return res.status(400).json({ message: 'Please provide at least one of the fields to update' });
+    // Extract fields from req.body and separate known from unknown
+    const providedFields = Object.keys(req.body);
+    const unknownFields = providedFields.filter(field => !allowedFields.includes(field));
+
+    // Check for any unknown fields
+    if (unknownFields.length > 0) {
+        return res.status(400).json({ message: 'Unknown fields provided', unknownFields });
     }
 
-    // Updates the business name if a new name is provided, otherwise keeps the existing name
-    business.name = name || business.name;
-    business.description = description || business.description;
-    business.address = address || business.address;
-    business.category = category || business.category;
-    business.contactPerson = contactPerson || business.contactPerson;
-    business.email = email || business.email;
-    business.images = images || business.images;
+    // Check if there’s at least one valid field to update
+    const hasValidFields = providedFields.some(field => allowedFields.includes(field) && req.body[field]);
+    if (!hasValidFields) {
+        return res.status(400).json({ message: 'Please provide at least one valid field to update' });
+    }
 
+    // Update business fields only if they are provided
+    allowedFields.forEach(field => {
+        if (req.body[field] !== undefined) {
+            business[field] = req.body[field];
+        }
+    });
+
+    // Return success message with updated business data
     res.json({ message: 'Business updated', business });
 }
 
 module.exports = {
     putBusiness
-}
+};
