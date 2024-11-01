@@ -34,15 +34,15 @@ Sukurti RESTful API naudojant Express.js, skirtą valdyti kategorijas, įmones i
 
 ### Duomenų Modeliai:
 
-- [ ] Kategorijos: Kiekviena kategorija turi ID, pavadinimą, fono spalvą ir ikonos URL.
-- [ ] Įmonės: Kiekvienas įmonės įrašas apima tokius duomenis kaip ID, pavadinimas, aprašymas, adresas, kategorija, kontaktinis asmuo, el. paštas ir nuotraukos.
-- [ ] Užsakymai: Sekami užsakymai su tokiomis detalėmis kaip ID, įmonės ID, data, laikas, vartotojo el. paštas, vartotojo vardas ir statusas.
+- [x] Kategorijos: Kiekviena kategorija turi ID, pavadinimą, fono spalvą ir ikonos URL.
+- [x] Įmonės: Kiekvienas įmonės įrašas apima tokius duomenis kaip ID, pavadinimas, aprašymas, adresas, kategorija, kontaktinis asmuo, el. paštas ir nuotraukos.
+- [x] Užsakymai: Sekami užsakymai su tokiomis detalėmis kaip ID, įmonės ID, data, laikas, vartotojo el. paštas, vartotojo vardas ir statusas.
 
 ### API kuriuos reikia įgyvendinti:
 
 #### 1. Kategorijos
-- [ ] GET /categories: Gauna visas kategorijas.
-- [ ] POST /categories: Sukuria naują kategoriją.
+- [x] GET /categories: Gauna visas kategorijas.
+- [x] POST /categories: Sukuria naują kategoriją.
 
 #### 2. Įmonės
 - [ ] GET /businesses: Gauna visas įmones.
