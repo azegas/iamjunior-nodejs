@@ -45,10 +45,10 @@ Sukurti RESTful API naudojant Express.js, skirtą valdyti kategorijas, įmones i
 - [x] POST /categories: Sukuria naują kategoriją.
 
 #### 2. Įmonės
-- [ ] GET /businesses: Gauna visas įmones.
+- [x] GET /businesses: Gauna visas įmones.
 - [ ] GET /businesses/category/:category: Gauna visas įmones, priklausančias nurodytai kategorijai.
 - [ ] GET /businesses/:id: Gauna konkrečią įmonę pagal ID.
-- [ ] POST /businesses: Prideda naują įmonę į sąrašą. Užtikrinti, kad būtų pateikti visi būtini laukai.
+- [x] POST /businesses: Prideda naują įmonę į sąrašą. Užtikrinti, kad būtų pateikti visi būtini laukai.
 - [ ] PUT /businesses/:id: Atnaujina esamą įmonę. Patikrinti, ar įmonė su nurodytu ID egzistuoja, prieš atnaujinant.
 - [ ] GET /businesses/:businessId/bookings/date/:date: Gauna visus užsakymus konkrečiai įmonei nurodytą dieną.
 

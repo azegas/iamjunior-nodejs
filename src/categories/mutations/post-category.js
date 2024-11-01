@@ -1,5 +1,13 @@
 const { categories } = require('../../data/data');
 
+/*
+{
+    "name": "labukas",
+    "color": "pink",
+    "url": "https://google.com"
+}
+*/
+
 function postCategory(req, res) {
     categories.push({
         id: categories.length + 1,

@@ -4,8 +4,6 @@ const morgan = require("morgan");
 require("dotenv").config();
 const app = express();
 
-const { categoriesRouter } = require('./categories');
-
 // ----------------------------------------------------------------
 // MIDDLEWARES 
 // ----------------------------------------------------------------
@@ -13,7 +11,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // middleware - custom middleware before processing requests
 app.use((req, res, next) => {
-    console.log('hello from custom middleware');
+    // console.log('hello from custom middleware');
     next();
 });
 
@@ -27,8 +25,12 @@ app.use(morgan('dev'));
 // ROUTES
 // ----------------------------------------------------------------
 
+const { categoriesRouter } = require('./categories');
+const { businessesRouter } = require('./businesses');
+
 // middleware to handle the routes. here we define the route prefix
 app.use('/api/categories', categoriesRouter);
+app.use('/api/businesses', businessesRouter);
 
 // ----------------------------------------------------------------
 // SERVER
