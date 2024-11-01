@@ -100,7 +100,7 @@ const bookings = [
         businessId: 1,
         date: "2023-10-01",
         time: "14:30",
-        userEmail: "user1@example.com",
+        userEmail: "user@example.com",
         userName: "User One",
         status: "Pending"
     },
@@ -109,7 +109,7 @@ const bookings = [
         businessId: 1,
         date: "2023-10-02",
         time: "15:00",
-        userEmail: "user2@example.com",
+        userEmail: "user@example.com",
         userName: "User Two",
         status: "Completed"
     },
