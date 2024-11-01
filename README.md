@@ -50,10 +50,10 @@ Sukurti RESTful API naudojant Express.js, skirtą valdyti kategorijas, įmones i
 - [x] GET /businesses/:id: Gauna konkrečią įmonę pagal ID.
 - [x] POST /businesses: Prideda naują įmonę į sąrašą. Užtikrinti, kad būtų pateikti visi būtini laukai.
 - [x] PUT /businesses/:id: Atnaujina esamą įmonę. Patikrinti, ar įmonė su nurodytu ID egzistuoja, prieš atnaujinant.
-- [ ] GET /businesses/:businessId/bookings/date/:date: Gauna visus užsakymus konkrečiai įmonei nurodytą dieną.
+- [x] GET /businesses/:businessId/bookings/date/:date: Gauna visus užsakymus konkrečiai įmonei nurodytą dieną.
 
 #### 3. Užsakymai
-- [ ] GET /bookings/user/:email: Gauna visus užsakymus, susijusius su konkretaus vartotojo el. pašto adresu.
+- [x] GET /bookings/user/:email: Gauna visus užsakymus, susijusius su konkretaus vartotojo el. pašto adresu.
 - [ ] POST /bookings: Sukuria naują užsakymą. Užtikrinti, kad būtų pateikti visi laukai.
 - [ ] DELETE /bookings/:id: Ištrina konkretų užsakymą.
 

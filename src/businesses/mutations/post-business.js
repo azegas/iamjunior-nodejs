@@ -1,6 +1,8 @@
 const { businesses } = require('../../data/data');
 
 /*
+http://localhost:3000/api/businesses
+
 {
     "name": "Fake Business Name",
     "description": "This is a fake business description.",

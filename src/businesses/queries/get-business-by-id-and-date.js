@@ -1,6 +1,7 @@
 const { businesses, bookings } = require('../../data/data');
 
 /*
+http://localhost:3000/api/businesses/:id/bookings/date/:date
 http://localhost:3000/api/businesses/1/bookings/date/2023-10-01
 */
 

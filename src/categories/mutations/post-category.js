@@ -1,6 +1,8 @@
 const { categories } = require('../../data/data');
 
 /*
+http://localhost:3000/api/categories
+
 {
     "name": "labukas",
     "color": "pink",

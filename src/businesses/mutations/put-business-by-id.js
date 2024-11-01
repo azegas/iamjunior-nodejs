@@ -1,6 +1,7 @@
 const { businesses } = require('../../data/data');
 
 /*
+http://localhost:3000/api/businesses/:id
 http://localhost:3000/api/businesses/1
 
 {
