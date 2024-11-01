@@ -5,7 +5,7 @@ const { postBusiness } = require('./mutations/post-business');
 const { getBusinessById } = require('./queries/get-business-by-id');
 const { getBusinessByCategory } = require('./queries/get-business-by-category');
 const { putBusiness } = require('./mutations/put-business-by-id');
-const { getBusinessByIdAndDate } = require('./queries/get-business-by-id-and-date');
+const { getBusinessByIdAndDate } = require('./queries/get-business-bookings-by-id-and-date');
 
 const businessesRouter = express.Router();
 
