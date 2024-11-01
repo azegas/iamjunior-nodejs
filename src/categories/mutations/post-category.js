@@ -11,11 +11,15 @@ http://localhost:3000/api/categories
 */
 
 function postCategory(req, res) {
+    const { name, color, url } = req.body;
+    if (!name || !color || !url) {
+        return res.status(400).json({ success: false, message: 'Please provide name, color, and url.' });
+    }
     categories.push({
         id: categories.length + 1,
-        name: req.body.name,
-        color: req.body.color,
-        url: req.body.url
+        name,
+        color,
+        url
     });
     
     res.json({
