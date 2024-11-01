@@ -18,11 +18,10 @@ function postBusiness(req, res) {
 
     const { name, description, address, category, contactPerson, email, images } = req.body;
 
-    // Check if all required fields are provided
     if (!name || !description || !address || !category || !contactPerson || !email || !images) {
         return res.status(400).json({
             success: false,
-            message: 'All fields are required: name, description, address, category, contactPerson, email, and images.'
+            message: 'Required fields: name, description, address, category, contactPerson, email, and images.'
         });
     }
 
